@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block containercontent %}
+<p><a style="height:100vh;width:100vw" onclick='window.top.location.href="{{ authorize_url }}?oauth_token={{ oauth_token }}"' href="{{ authorize_url }}?oauth_token={{ oauth_token }}" class="btn btn-small btn-primary">Join</a></p>
+
+{% endblock %}
