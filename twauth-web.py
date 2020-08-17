@@ -119,7 +119,7 @@ def callback():
         '_privToken': app.config['PRIV_TOKEN']
     }
     
-    res = requests.post('http://localhost:8081/user', json=jsonToSend)
+    res = requests.post('https://api.bluesquid.org/user', json=jsonToSend)
     print('--- User created ---', res)
 
     # Call api.twitter.com/1.1/users/show.json?user_id={user_id}
@@ -153,4 +153,4 @@ def internal_server_error(e):
 
   
 if __name__ == '__main__':
-    app.run()
+    app.run(host= '0.0.0.0')
